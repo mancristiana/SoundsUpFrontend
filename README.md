@@ -1,30 +1,21 @@
-# angular-webpack
+# SoundsUp Frontend
 
 [![Dependency Status](https://david-dm.org/preboot/angular-webpack/status.svg)](https://david-dm.org/preboot/angular-webpack#info=dependencies) [![devDependency Status](https://david-dm.org/preboot/angular-webpack/dev-status.svg)](https://david-dm.org/preboot/angular-webpack#info=devDependencies)
 [![Join the chat at https://gitter.im/preboot/angular-webpack](https://badges.gitter.im/preboot/angular-webpack.svg)](https://gitter.im/preboot/angular-webpack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-A complete, yet simple, starter for Angular v2+ using Webpack.
-
-This seed repo serves as an Angular starter for anyone looking to get up and running with Angular and TypeScript fast. Using [Webpack](http://webpack.github.io/) for building our files and assisting with boilerplate. We're also using Protractor for our end-to-end story and Karma for our unit tests.
-* Best practices in file and application organization for [Angular](https://angular.io/).
-* Ready to go build system using [Webpack](https://webpack.github.io/docs/) for working with [TypeScript](http://www.typescriptlang.org/).
-* Testing Angular code with [Jasmine](http://jasmine.github.io/) and [Karma](http://karma-runner.github.io/).
-* Coverage with [Istanbul](https://github.com/gotwarlost/istanbul)
-* End-to-end Angular code using [Protractor](https://angular.github.io/protractor/).
-* Stylesheets with [SASS](http://sass-lang.com/) (not required, it supports regular css too).
-* Error reported with [TSLint](http://palantir.github.io/tslint/) and [Codelyzer](https://github.com/mgechev/codelyzer).
-* Documentation with [TypeDoc](http://typedoc.org/).
-
->Warning: Make sure you're using the latest version of Node.js and NPM
+Angular 2 Client for SoundsUp - a social media platform for music enthusiasts.
+ 
+This project was started using the following seed repo: [preboot/angular-webpack](https://github.com/preboot/angular-webpack).
 
 ### Quick start
 
+>Note: Make sure you're using the latest version of Node.js and NPM
 ```bash
-# clone our repo
-$ git clone https://github.com/preboot/angular-webpack.git my-app
+# clone the  source code
+$ git clone https://github.com/mancristiana/SoundsUpFrontend.git
 
-# change directory to your app
-$ cd my-app
+# change directory to the app
+$ cd SoundsUpFrontend
 
 # install the dependencies with npm
 $ npm install
@@ -32,7 +23,9 @@ $ npm install
 # start the server
 $ npm start
 ```
-go to [http://localhost:8080](http://localhost:8080) in your browser.
+go to [http://localhost:3000](http://localhost:3000) in your browser.
+
+
 
 # Table of Contents
 
@@ -44,21 +37,19 @@ go to [http://localhost:8080](http://localhost:8080) in your browser.
     * [Production](#production)
     * [Documentation](#documentation)
 * [Frequently asked questions](#faq)
-* [TypeScript](#typescript)
-* [License](#license)
+* [Technologies](#technologies)
 
 # Getting Started
 
 ## Dependencies
 
 What you need to run this app:
-* `node` and `npm` (Use [NVM](https://github.com/creationix/nvm))
+* `node` and `npm`
 * Ensure you're running Node (`v6.x.x`+) and NPM (`3.x.x`+)
 
 ## Installing
 
-* `fork` this repo
-* `clone` your fork
+* `clone` this repo
 * `npm install` to install all dependencies
 
 ## Developing
@@ -67,7 +58,7 @@ After you have installed all dependencies you can now start developing with:
 
 * `npm start`
 
-It will start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The application can be checked at `http://localhost:8080`.
+It will start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The application can be checked at `http://localhost:3000`.
 
 As an alternative, you can work using Hot Module Replacement (HMR):
 
@@ -131,19 +122,13 @@ And in [vendor.ts](https://github.com/preboot/angular-webpack/blob/master/src/ve
 import 'bootstrap/dist/css/bootstrap.css';
 ```
 
-# TypeScript
+# Technologies
 
-> To take full advantage of TypeScript with autocomplete you would have to use an editor with the correct TypeScript plugins.
-
-## Use a TypeScript-aware editor
-
-We have good experience using these editors:
-
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Webstorm 11+](https://www.jetbrains.com/webstorm/download/)
-* [Atom](https://atom.io/) with [TypeScript plugin](https://atom.io/packages/atom-typescript)
-* [Sublime Text](http://www.sublimetext.com/3) with [Typescript-Sublime-Plugin](https://github.com/Microsoft/Typescript-Sublime-plugin#installation)
-
-# License
-
-[MIT](/LICENSE)
+* Best practices in file and application organization for [Angular](https://angular.io/).
+* Ready to go build system using [Webpack](https://webpack.github.io/docs/) for working with [TypeScript](http://www.typescriptlang.org/).
+* Testing Angular code with [Jasmine](http://jasmine.github.io/) and [Karma](http://karma-runner.github.io/).
+* Coverage with [Istanbul](https://github.com/gotwarlost/istanbul)
+* End-to-end Angular code using [Protractor](https://angular.github.io/protractor/).
+* Stylesheets with [Less](http://lesscss.org/)
+* Error reported with [TSLint](http://palantir.github.io/tslint/) and [Codelyzer](https://github.com/mgechev/codelyzer).
+* Documentation with [TypeDoc](http://typedoc.org/).
