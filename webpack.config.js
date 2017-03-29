@@ -114,17 +114,9 @@ module.exports = function makeWebpackConfig() {
       // all css required in src/app files will be merged in js files
       {test: /\.css$/, include: root('src', 'app'), loader: 'raw-loader!postcss-loader'},
 
-      // support for .scss files
+      // support for .less files
       // use 'null' loader in test mode (https://github.com/webpack/null-loader)
       // all css in src/style will be bundled in an external css file
-      {
-        test: /\.(scss|sass)$/,
-        exclude: root('src', 'app'),
-        loader: isTest ? 'null-loader' : ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'postcss-loader', 'sass-loader']})
-      },
-      // all css required in src/app files will be merged in js files
-      {test: /\.(scss|sass)$/, exclude: root('src', 'style'), loader: 'raw-loader!postcss-loader!sass-loader'},
-
         {
             test: /\.less$/,
             exclude: root('src', 'app'),
@@ -191,14 +183,6 @@ module.exports = function makeWebpackConfig() {
         tslint: {
           emitErrors: false,
           failOnHint: false
-        },
-        /**
-         * Sass
-         * Reference: https://github.com/jtangelder/sass-loader
-         * Transforms .scss files to .css
-         */
-        sassLoader: {
-          //includePaths: [path.resolve(__dirname, "node_modules/foundation-sites/scss")]
         },
         /**
          * PostCSS
