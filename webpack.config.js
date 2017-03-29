@@ -179,6 +179,13 @@ module.exports = function makeWebpackConfig() {
             root('./src') // location of your src
         ),
 
+        // This will let bootstrap to find jquery
+        new webpack.ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery'
+        }),
+
         // Tslint configuration for webpack 2
         new webpack.LoaderOptionsPlugin({
             options: {
