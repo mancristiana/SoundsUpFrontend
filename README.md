@@ -1,187 +1,134 @@
-# Angular QuickStart Source
-[![Build Status][travis-badge]][travis-badge-url]
+# SoundsUp Frontend
 
-This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html),
-the foundation for most of the documentation samples and potentially a good starting point for your application.
+[![Dependency Status](https://david-dm.org/preboot/angular-webpack/status.svg)](https://david-dm.org/preboot/angular-webpack#info=dependencies) [![devDependency Status](https://david-dm.org/preboot/angular-webpack/dev-status.svg)](https://david-dm.org/preboot/angular-webpack#info=devDependencies)
+[![Join the chat at https://gitter.im/preboot/angular-webpack](https://badges.gitter.im/preboot/angular-webpack.svg)](https://gitter.im/preboot/angular-webpack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-It's been extended with testing support so you can start writing tests immediately.
-
-**This is not the perfect arrangement for your application. It is not designed for production.
-It exists primarily to get you started quickly with learning and prototyping in Angular**
-
-We are unlikely to accept suggestions about how to grow this QuickStart into something it is not.
-Please keep that in mind before posting issues and PRs.
-
-## Updating to a newer version of the Quickstart Repo
-
-From time to time the QuickStart will add be enhanced with support for new features or to reflect
-changes to the [official Style Guide](https://angular.io/docs/ts/latest/guide/style-guide.html).
-
-You can update your existing project to an up-to-date QuickStart by following these instructions:
-- Create a new project using the [instructions below](#create-a-new-project-based-on-the-quickstart)
-- Copy the code you have in your project's `main.ts` file onto `src/app/main.ts` in the new project
-- Copy your old `app` folder into `src/app`
-- Delete `src/app/main.ts` if you have one (we now use `src/main.ts` instead)
-- Copy your old `index.html`, `styles.css` and `tsconfig.json` into `src/`
-- Install all your third party dependencies
-- Copy your old `e2e/` folder into `e2e/`
-- Copy over any other files you added to your project
-- Copy your old `.git` folder into your new project's root
-
-Now you can continue working on the new project.
-
-## Prerequisites
-
-Node.js and npm are essential to Angular development. 
-    
-<a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank" title="Installing Node.js and updating npm">
-Get it now</a> if it's not already installed on your machine.
+Angular 2 Client for SoundsUp - a social media platform for music enthusiasts.
  
-**Verify that you are running at least node `v4.x.x` and npm `3.x.x`**
-by running `node -v` and `npm -v` in a terminal/console window.
-Older versions produce errors.
+This project was started using the following seed repo: [preboot/angular-webpack](https://github.com/preboot/angular-webpack).
 
-We recommend [nvm](https://github.com/creationix/nvm) for managing multiple versions of node and npm.
+### Quick start
 
-## Create a new project based on the QuickStart
+>Note: Make sure you're using the latest version of Node.js and NPM
+```bash
+# clone the  source code
+$ git clone https://github.com/mancristiana/SoundsUpFrontend.git
 
-Clone this repo into new project folder (e.g., `my-proj`).
-```shell
-git clone https://github.com/angular/quickstart  my-proj
-cd my-proj
+# change directory to the app
+$ cd SoundsUpFrontend
+
+# install the dependencies with npm
+$ npm install
+
+# start the server
+$ npm start
 ```
+go to [http://localhost:3000](http://localhost:3000) in your browser.
 
-We have no intention of updating the source on `angular/quickstart`.
-Discard the `.git` folder..
-```shell
-rm -rf .git  # OS/X (bash)
-rd .git /S/Q # windows
-```
-### Delete _non-essential_ files (optional)
 
-You can quickly delete the _non-essential_ files that concern testing and QuickStart repository maintenance
-(***including all git-related artifacts*** such as the `.git` folder and `.gitignore`!)
-by entering the following commands while in the project folder:
 
-##### OS/X (bash)
-```shell
-xargs rm -rf < non-essential-files.osx.txt
-rm src/app/*.spec*.ts
-rm non-essential-files.osx.txt
-```
+# Table of Contents
 
-##### Windows
-```shell
-for /f %i in (non-essential-files.txt) do del %i /F /S /Q
-rd .git /s /q
-rd e2e /s /q
-```
+* [Getting Started](#getting-started)
+    * [Dependencies](#dependencies)
+    * [Installing](#installing)
+    * [Developing](#developing)
+    * [Testing](#testing)
+    * [Production](#production)
+    * [Documentation](#documentation)
+* [Frequently asked questions](#faq)
+* [Technologies](#technologies)
 
-### Create a new git repo
-You could [start writing code](#start-development) now and throw it all away when you're done.
-If you'd rather preserve your work under source control, consider taking the following steps.
+# Getting Started
 
-Initialize this project as a *local git repo* and make the first commit:
-```shell
-git init
-git add .
-git commit -m "Initial commit"
-```
+## Dependencies
 
->Recover the deleted `.gitignore` from the QuickStart repository 
-if you lost it in the _Delete non-essential files_ step.
+What you need to run this app:
+* `node` and `npm`
+* Ensure you're running Node (`v6.x.x`+) and NPM (`3.x.x`+)
 
-Create a *remote repository* for this project on the service of your choice.
+## Installing
 
-Grab its address (e.g. *`https://github.com/<my-org>/my-proj.git`*) and push the *local repo* to the *remote*.
-```shell
-git remote add origin <repo-address>
-git push -u origin master
-```
-## Install npm packages
+* `clone` this repo
+* `npm install` to install all dependencies
 
-> See npm and nvm version notes above
+## Developing
 
-Install the npm packages described in the `package.json` and verify that it works:
+After you have installed all dependencies you can now start developing with:
 
-```shell
-npm install
-npm start
-```
+* `npm start`
 
->Doesn't work in _Bash for Windows_ which does not support servers as of January, 2017.
+It will start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The application can be checked at `http://localhost:3000`.
 
-The `npm start` command first compiles the application, 
-then simultaneously re-compiles and runs the `lite-server`.
-Both the compiler and the server watch for file changes.
+As an alternative, you can work using Hot Module Replacement (HMR):
 
-Shut it down manually with `Ctrl-C`.
+* `npm run start:hmr`
 
-You're ready to write your application.
-
-### npm scripts
-
-We've captured many of the most useful commands in npm scripts defined in the `package.json`:
-
-* `npm start` - runs the compiler and a server at the same time, both in "watch mode".
-* `npm run build` - runs the TypeScript compiler once.
-* `npm run build:w` - runs the TypeScript compiler in watch mode; the process keeps running, awaiting changes to TypeScript files and re-compiling when it sees them.
-* `npm run serve` - runs the [lite-server](https://www.npmjs.com/package/lite-server), a light-weight, static file server, written and maintained by
-[John Papa](https://github.com/johnpapa) and
-[Christopher Martin](https://github.com/cgmartin)
-with excellent support for Angular apps that use routing.
-
-Here are the test related scripts:
-* `npm test` - compiles, runs and watches the karma unit tests
-* `npm run e2e` - compiles and run protractor e2e tests, written in Typescript (*e2e-spec.ts)
+And you are all set! You can now modify your components on the fly without having to reload the entire page.
 
 ## Testing
 
-The QuickStart documentation doesn't discuss testing.
-This repo adds both karma/jasmine unit test and protractor end-to-end testing support.
+#### 1. Unit Tests
 
-These tools are configured for specific conventions described below.
+* single run: `npm test`
+* live mode (TDD style): `npm run test-watch`
 
-*It is unwise and rarely possible to run the application, the unit tests, and the e2e tests at the same time.
-We recommend that you shut down one before starting another.*
+#### 2. End-to-End Tests (aka. e2e, integration)
 
-### Unit Tests
-TypeScript unit-tests are usually in the `src/app` folder. Their filenames must end in `.spec.ts`.
+* single run:
+  * in a tab, *if not already running!*: `npm start`
+  * in a new tab: `npm run webdriver-start`
+  * in another new tab: `npm run e2e`
+* interactive mode:
+  * instead of the last command above, you can run: `npm run e2e-live`
+  * when debugging or first writing test suites, you may find it helpful to try out Protractor commands without starting up the entire test suite. You can do this with the element explorer.
+  * you can learn more about [Protractor Interactive Mode here](https://github.com/angular/protractor/blob/master/docs/debugging.md#testing-out-protractor-interactively)
 
-Look for the example `src/app/app.component.spec.ts`.
-Add more `.spec.ts` files as you wish; we configured karma to find them.
+## Production
 
-Run it with `npm test`
+To build your application, run:
 
-That command first compiles the application, then simultaneously re-compiles and runs the karma test-runner.
-Both the compiler and the karma watch for (different) file changes.
+* `npm run build`
 
-Shut it down manually with `Ctrl-C`.
+You can now go to `/dist` and deploy that to your server!
 
-Test-runner output appears in the terminal window.
-We can update our app and our tests in real-time, keeping a weather eye on the console for broken tests.
-Karma is occasionally confused and it is often necessary to shut down its browser or even shut the command down (`Ctrl-C`) and
-restart it. No worries; it's pretty quick.
+## Documentation
 
-### End-to-end (E2E) Tests
+You can generate api docs (using [TypeDoc](http://typedoc.org/)) for your code with the following:
 
-E2E tests are in the `e2e` directory, side by side with the `src` folder.
-Their filenames must end in `.e2e-spec.ts`.
+* `npm run docs`
 
-Look for the example `e2e/app.e2e-spec.ts`.
-Add more `.e2e-spec.js` files as you wish (although one usually suffices for small projects);
-we configured Protractor to find them.
+# FAQ
 
-Thereafter, run them with `npm run e2e`.
+#### Do I need to add script / link tags into index.html ?
 
-That command first compiles, then simultaneously starts the `lite-server` at `localhost:8080`
-and launches Protractor.  
+No, Webpack will add all the needed Javascript bundles as script tags and all the CSS files as link tags. The advantage is that you don't need to modify the index.html every time you build your solution to update the hashes.
 
-The pass/fail test results appear at the bottom of the terminal window.
-A custom reporter (see `protractor.config.js`) generates a  `./_test-output/protractor-results.txt` file
-which is easier to read; this file is excluded from source control.
+#### How to include external angular libraries ?
 
-Shut it down manually with `Ctrl-C`.
+It's simple, just install the lib via npm and import it in your code when you need it. Don't forget that you need to configure some external libs in the [bootstrap](https://github.com/preboot/angular-webpack/blob/master/src/main.ts) of your application.
 
-[travis-badge]: https://travis-ci.org/angular/quickstart.svg?branch=master
-[travis-badge-url]: https://travis-ci.org/angular/quickstart
+#### How to include external css files such as bootstrap.css ?
+
+Just install the lib and import the css files in [vendor.ts](https://github.com/preboot/angular-webpack/blob/master/src/vendor.ts). For example this is how to do it with bootstrap:
+
+```sh
+npm install bootstrap@next --save
+```
+
+And in [vendor.ts](https://github.com/preboot/angular-webpack/blob/master/src/vendor.ts) add the following:
+
+```ts
+import 'bootstrap/dist/css/bootstrap.css';
+```
+
+# Technologies
+
+* Best practices in file and application organization for [Angular](https://angular.io/).
+* Ready to go build system using [Webpack](https://webpack.github.io/docs/) for working with [TypeScript](http://www.typescriptlang.org/).
+* Testing Angular code with [Jasmine](http://jasmine.github.io/) and [Karma](http://karma-runner.github.io/).
+* Coverage with [Istanbul](https://github.com/gotwarlost/istanbul)
+* End-to-end Angular code using [Protractor](https://angular.github.io/protractor/).
+* Stylesheets with [Less](http://lesscss.org/)
+* Error reported with [TSLint](http://palantir.github.io/tslint/) and [Codelyzer](https://github.com/mgechev/codelyzer).
+* Documentation with [TypeDoc](http://typedoc.org/).
