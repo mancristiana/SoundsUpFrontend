@@ -2,28 +2,32 @@ import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
+
+import { routing } from './app.routing';
+import { LoginModule } from './login/login.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { ApiService } from './shared';
-import { routing } from './app.routing';
 
-import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
-import { LoginComponent } from './login/login.component';
+import { ApiService } from './shared';
+
+
+
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
         FormsModule,
-        routing
+        routing,
+        LoginModule
     ],
     declarations: [
         AppComponent,
         HomeComponent,
-        AboutComponent,
-        LoginComponent
+        AboutComponent
     ],
     providers: [
         ApiService
