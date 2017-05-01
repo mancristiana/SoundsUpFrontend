@@ -91,14 +91,11 @@
     "directive-selector": [
       true,
       "attribute",
-      "my",
       "camelCase"
     ],
     "component-selector": [
       true,
-      "element",
-      "my",
-      "kebab-case"
+      "element"
     ],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
