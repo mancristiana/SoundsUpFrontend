@@ -10,6 +10,7 @@ import { ApiService } from './shared';
 import { routing } from './app.routing';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
     imports: [
@@ -21,7 +22,8 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     declarations: [
         AppComponent,
         HomeComponent,
-        AboutComponent
+        AboutComponent,
+        LoginComponent
     ],
     providers: [
         ApiService
