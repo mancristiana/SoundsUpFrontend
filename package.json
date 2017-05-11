@@ -2,6 +2,9 @@
   "name": "SoundsUp",
   "version": "0.1.0",
   "license": "MIT",
+  "engines": {
+    "node": "6.9.4"
+  },
   "scripts": {
     "clean": "rimraf node_modules doc dist && npm cache clean",
     "clean-install": "npm run clean && npm install",
