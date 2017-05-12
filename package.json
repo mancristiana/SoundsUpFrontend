@@ -10,14 +10,14 @@
         "clean-install": "npm run clean && npm install",
         "clean-start": "npm run clean-install && npm start",
         "ng": "ng",
-        "deploy": "http-server",
         "start": "ng serve",
+        "start.prod": "http-server dist/",
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "preinstall": "npm install -g http-server",
-        "postinstall": "ng build && mv dist/* ."
+        "preinstall": "npm install -g http-server && npm intall -g @angular/cli",
+        "postinstall": "ng build --prod"
     },
     "dependencies": {
         "@angular/common": "^4.0.0",
