@@ -19,20 +19,25 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Login</a></li>
+                    <li><a [routerLink]="['login']">Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
 <main>
+
     <h1>Hello from {{title}}!</h1>
+    <button class="btn btn-primary">
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+    </button>
 
     <!-- Images (and assets) are parsed and loaded from within the public directory -->
-    <img src="/img/angular.png">
+    <img src="assets/img/angular.png">
 
     <router-outlet></router-outlet>
 </main>
 <footer>
-    <a [href]="url">Webpack Angular 2 Starter</a>
+    Authors: Andrei Atanasiu, Cristiana Man, Richard Oros
+    &copy; KEA Software Development 2017
 </footer>
