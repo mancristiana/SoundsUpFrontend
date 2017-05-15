@@ -60,17 +60,19 @@ export class LoginService {
 
     private googleSignIn(googleUser: any) {
 
+        console.log("SIGN IN WAS CLICKED");
+
         this.googleUser = googleUser;
         let token = googleUser.getAuthResponse().id_token;
         // YOUR CODE HERE
-        this.verifyToken(token)
-            .subscribe(
-                t => console.log('TOKEN = ', t),
-                err => console.log('ERROR = ', err)
-            );
+        // this.verifyToken(token)
+        //     .subscribe(
+        //         t => console.log('TOKEN = ', t),
+        //         err => console.log('ERROR = ', err)
+        //     );
 
 
-        // SHOW SOMETHING IN THE COMPONENT
+        // Call sign in handler to do something in the component
         this.signInHandler.onSignIn(googleUser);
     }
 
@@ -99,7 +101,10 @@ export class LoginService {
     }
 
     public googleIsSignedIn() {
-        return this.googleUser.isSignedIn();
+        if(this.googleUser) {
+            return this.googleUser.isSignedIn();
+        }
+        return false;
     }
 
     public googleSignOut() {
@@ -107,8 +112,7 @@ export class LoginService {
         gapi.load('auth2', () => {
             loginService.googleAuth = gapi.auth2.getAuthInstance();
             loginService.googleAuth.signOut().then(() => {
-                console.log('User signed out.');
-                console.log(loginService.googleIsSignedIn());
+                loginService.signInHandler.onSignOut();
             });
         });
     }
