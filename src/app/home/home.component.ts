@@ -1,16 +1,18 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { PostService } from '../shared/services/post.service';
 import { Post } from '../shared/models/post';
-declare var Masonry: any;
+
+import * as masonry from 'masonry-layout';
 
 @Component({
     selector: 'home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.less']
 })
-export class HomeComponent implements OnInit, AfterViewInit {
-    @ViewChild('masonry') masonry: ElementRef;
-    masonryGrid;
+export class HomeComponent implements OnInit {
+    @ViewChild('masonryElementRef') masonryElementRef: ElementRef;
+    masonry: any;
+    masonryOptions;
     posts: Post[];
 
     constructor(private postService: PostService) {
@@ -27,22 +29,23 @@ export class HomeComponent implements OnInit, AfterViewInit {
             );
     }
 
-    ngAfterViewInit() {
-       setTimeout(()=> {
-           this.loadMasonry();
-       }, 3000);
-    }
-
     loadMasonry() {
-        console.log("LOAD MASONRY");
-
-        this.masonryGrid = new Masonry(this.masonry.nativeElement, {
-            // options
+        // Create masonry options object
+        this.masonryOptions = {
             itemSelector: '.masonry-item',
-            columnWidth: 200,
+            columnWidth: 250,
             gutter: 10,
             isFitWidth: true
+        };
+
+        // Initialize Masonry
+        this.masonry = new masonry(this.masonryElementRef.nativeElement, this.masonryOptions);
+
+        setTimeout(() => {
+            this.masonry.layout();
         });
+
     }
+
 
 }

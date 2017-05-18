@@ -3,12 +3,10 @@
         <small>Share your favourite songs!</small>
     </h1>
 </div>
-
-<button (click)="loadMasonry()" class="btn btn-primary">Stupid Masonry</button>
 <div class="container-fluid">
-    <div #masonry class="masonry">
+    <div #masonryElementRef class="masonry">
         <div *ngFor="let post of posts" class="masonry-item">
-            <post [post]="post"></post>
+            <post [post]="post" (init)="loadMasonry()"></post>
         </div>
     </div>
 </div>
