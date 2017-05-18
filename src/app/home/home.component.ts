@@ -1,17 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+declare var Masonry: any;
 
 @Component({
-    selector: 'my-home',
-    templateUrl: './home.component.html'
+    selector: 'home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.less']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
+    @ViewChild('masonry') masonry: ElementRef;
 
-    constructor() {
-        // Do stuff
-    }
+    constructor() {}
 
     ngOnInit() {
-        console.log('Hello Home');
+
+    }
+
+    ngAfterViewInit() {
+        new Masonry(this.masonry.nativeElement, {
+            // options
+            itemSelector: '.masonry-item',
+            columnWidth: 200,
+            gutter: 10,
+            isFitWidth: true
+        });
     }
 
 }

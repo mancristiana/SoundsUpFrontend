@@ -7,13 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './login/login.module';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent,
         AboutComponent
     ],
     imports: [
@@ -21,6 +20,7 @@ import { AboutComponent } from './about/about.component';
         FormsModule,
         HttpModule,
         AppRoutingModule,
+        HomeModule,
         LoginModule
     ],
     providers: [],
