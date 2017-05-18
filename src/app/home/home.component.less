@@ -1,0 +1,27 @@
+@import "../../assets/style/variables";
+
+.masonry {
+    //width: 100%!important;
+    margin: 0 auto;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.masonry-item {
+    width: 200px;
+    margin-bottom: 10px;
+    float: left;
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+.masonry-item--height2 {
+    height: 200px;
+}
+
+.masonry-item--height3 {
+    height: 260px;
+}

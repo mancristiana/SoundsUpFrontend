@@ -3,30 +3,12 @@
         <small>Share your favourite songs!</small>
     </h1>
 </div>
+
+<button (click)="loadMasonry()" class="btn btn-primary">Stupid Masonry</button>
 <div class="container-fluid">
     <div #masonry class="masonry">
-        <div class="masonry-item">something</div>
-        <div class="masonry-item masonry-item--height2"></div>
-        <div class="masonry-item masonry-item--height3"></div>
-        <div class="masonry-item masonry-item--height2"></div>
-        <div class="masonry-item"></div>
-        <div class="masonry-item"></div>
-        <div class="masonry-item"></div>
-        <div class="masonry-item masonry-item--height2"></div>
-        <div class="masonry-item masonry-item--height3"></div>
-        <div class="masonry-item"></div>
-        <div class="masonry-item masonry-item--height2"></div>
-        <div class="masonry-item"></div>
-        <div class="masonry-item masonry-item--height2"></div>
-        <div class="masonry-item"></div>
-        <div class="masonry-item"></div>
-        <div class="masonry-item masonry-item--height2"></div>
-        <div class="masonry-item"></div>
-        <div class="masonry-item"></div>
-        <div class="masonry-item masonry-item--height3"></div>
-        <div class="masonry-item masonry-item--height2"></div>
-        <div class="masonry-item"></div>
-        <div class="masonry-item"></div>
-        <div class="masonry-item masonry-item--height2"></div>
+        <div *ngFor="let post of posts" class="masonry-item">
+            <post [post]="post"></post>
+        </div>
     </div>
 </div>
