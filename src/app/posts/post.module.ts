@@ -8,12 +8,14 @@ import { NewPostComponent } from './new-post/new-post.component';
 
 import { PostService } from './post.service';
 import { ApiService } from '../shared';
+import { SpotifyModule } from '../spotify/spotify.module';
 
 
 @NgModule({
     imports: [
         BrowserModule,
-        HttpModule
+        HttpModule,
+        SpotifyModule
     ],
     providers: [
         PostService,
