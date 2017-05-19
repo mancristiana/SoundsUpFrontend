@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ApiService {
-    // public url = 'https://sounds-up-api.herokuapp.com/api';
-    public url = 'http://localhost:8080/api';
+    public url = 'https://sounds-up-api.herokuapp.com/api';
+    // public url = 'http://localhost:8080/api';
 
     constructor() {}
 
