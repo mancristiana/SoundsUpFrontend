@@ -4,8 +4,13 @@
         <h3>{{post.track.name}}</h3>
         <h4>by {{post.track.artist.name}}</h4>
         <h5>{{post.track.album.name}}</h5>
-        <button class="btn btn-primary">
-            <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+        <button class="btn btn-primary" (click)="toggleAudio()">
+            <span class="glyphicon"
+                  [ngClass]="{
+                  'glyphicon-play': !isPlaying,
+                  'glyphicon-pause': isPlaying }"
+                  aria-hidden="true">
+            </span>
         </button>
     </div>
     <div class="post-description">
