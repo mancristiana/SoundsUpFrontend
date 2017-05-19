@@ -2,7 +2,7 @@
  * Created by mancr on 3/12/2017.
  */
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { SpotifyTrack } from '../../shared/models/track.model';
+import { SpotifyTrack } from '../../shared/models/spotify-track.model';
 
 @Component({
     selector: 'spotify-track',

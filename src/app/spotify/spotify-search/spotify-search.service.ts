@@ -8,7 +8,7 @@ import { Http } from "@angular/http";
 import { Observable }     from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { SpotifyTrack } from '../../shared/models/track.model';
+import { SpotifyTrack } from '../../shared/models/spotify-track.model';
 
 @Injectable()
 export class SpotifySearchService {

@@ -3,7 +3,7 @@
  */
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
-import { SpotifyTrack } from '../../shared/models/track.model';
+import { SpotifyTrack } from '../../shared/models/spotify-track.model';
 
 @Component({
     selector: 'new-post',

@@ -12,8 +12,8 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
-import { SpotifyTrack } from '../../shared/models/track.model';
 import { SpotifySearchService } from './spotify-search.service';
+import { SpotifyTrack } from '../../shared/models/spotify-track.model';
 
 @Component({
     selector: 'spotify-search',
