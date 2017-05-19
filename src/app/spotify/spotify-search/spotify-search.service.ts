@@ -17,7 +17,6 @@ export class SpotifySearchService {
     constructor(private http: Http) {}
 
     search(track: string): Observable<SpotifyTrack[]> {
-        console.log("Searching term inside search service", track);
         if (track) {
             return this.http
                 .get(`${this.spotifyApi}v1/search?q=${track}&type=track`)
