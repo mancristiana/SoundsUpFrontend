@@ -7,7 +7,10 @@
         by <span *ngFor="let artist of track.artists">{{artist.name}}</span>
     </div>
     <div class="media-left media-middle">
-        <button class="btn btn-primary" (click)="select()">
+        <button *ngIf="hasUnselectionButton" class="btn btn-primary" (click)="unselect()">
+            Unselect
+        </button>
+        <button *ngIf="hasSelectionButton" class="btn btn-primary" (click)="select()">
             Select
         </button>
     </div>

@@ -1,6 +1,6 @@
 <div class="list-group">
     <a *ngFor="let track of tracks" class="list-group-item">
-        <spotify-track [track]="track" (trackSelected)="select($event)"></spotify-track>
+        <spotify-track [track]="track" [hasSelectionButton]="true" (trackSelected)="select($event)"></spotify-track>
     </a>
 </div>
 

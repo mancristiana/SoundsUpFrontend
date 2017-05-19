@@ -10,18 +10,18 @@ import { SpotifyTrack } from '../../shared/models/track.model';
 })
 export class SpotifyTrackSelectorComponent {
     tracks: SpotifyTrack[];
+    selectedTrack: SpotifyTrack;
 
     constructor() {
         this.tracks = [];
     }
 
     setTracks(tracks) {
-        console.log("Setting tracks", tracks);
         this.tracks = tracks;
     }
 
-    doStuffOnTrackSelected(track: SpotifyTrack) {
-        console.log("track selected", track);
+    onTrackSelection(track: SpotifyTrack) {
+        this.selectedTrack = track;
     }
 
 

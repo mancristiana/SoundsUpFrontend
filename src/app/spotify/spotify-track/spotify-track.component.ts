@@ -11,10 +11,17 @@ import { SpotifyTrack } from '../../shared/models/track.model';
 })
 export class SpotifyTrackComponent {
     @Input() track: SpotifyTrack;
+    @Input() hasSelectionButton: boolean = false;
+    @Input() hasUnselectionButton: boolean = false;
     @Output() trackSelected = new EventEmitter<SpotifyTrack>();
+    @Output() trackUnselected = new EventEmitter<SpotifyTrack>();
 
     select() {
         this.trackSelected.emit(this.track);
+    }
+
+    unselect() {
+        this.trackUnselected.emit(this.track);
     }
 
 
