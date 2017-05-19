@@ -14,14 +14,15 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
-
-import { SpotifyTrack } from '../shared';
+import { SpotifyTrack } from '../../shared/models/track.model';
 import { SpotifySearchService } from './spotify-search.service';
+
+
 
 @Component({
     selector: 'spotify-search',
-    templateUrl: './spotify-search.component.html',
-    styleUrls: ['./spotify-search.component.less']
+    templateUrl: 'spotify-search.component.html',
+    styleUrls: ['spotify-search.component.less']
 })
 export class SpotifySearchComponent implements OnInit {
     tracks: Observable<SpotifyTrack[]>;

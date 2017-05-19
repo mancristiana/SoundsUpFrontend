@@ -1,7 +1,4 @@
 /**
- * Created by mancr on 19-May-17.
- */
-/**
  * Created by mancr on 3/12/2017.
  */
 
@@ -11,11 +8,11 @@ import { Http } from "@angular/http";
 import { Observable }     from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { SpotifyTrack } from "../shared";
+import { SpotifyTrack } from '../../shared/models/track.model';
 
 @Injectable()
 export class SpotifySearchService {
-    spotifyApi = "https://api.spotify.com/";
+    spotifyApi = 'https://api.spotify.com/';
 
     constructor(private http: Http) {}
 

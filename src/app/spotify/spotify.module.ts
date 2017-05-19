@@ -4,8 +4,9 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule } from "@angular/http";
-import { SpotifySearchService } from './spotify-search.service';
-import { SpotifySearchComponent } from './spotify-search.component';
+import { SpotifySearchService } from './spotify-search/spotify-search.service';
+import { SpotifySearchComponent } from './spotify-search/spotify-search.component';
+
 
 @NgModule({
     imports: [
