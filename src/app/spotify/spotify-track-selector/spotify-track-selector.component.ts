@@ -1,7 +1,7 @@
 /**
  * Created by mancr on 3/12/2017.
  */
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { SpotifyTrack } from '../../shared/models/track.model';
 
 @Component({
@@ -11,6 +11,7 @@ import { SpotifyTrack } from '../../shared/models/track.model';
 export class SpotifyTrackSelectorComponent {
     tracks: SpotifyTrack[];
     selectedTrack: SpotifyTrack;
+    @Output() selected = new EventEmitter<SpotifyTrack>();
 
     constructor() {
         this.tracks = [];
@@ -22,6 +23,7 @@ export class SpotifyTrackSelectorComponent {
 
     onTrackSelection(track: SpotifyTrack) {
         this.selectedTrack = track;
+        this.selected.emit(track);
     }
 
 

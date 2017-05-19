@@ -3,6 +3,7 @@
  */
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
+import { SpotifyTrack } from '../../shared/models/track.model';
 
 @Component({
     selector: 'new-post',
@@ -17,4 +18,9 @@ export class NewPostComponent {
     goBack(): void {
         this.location.back();
     }
+
+    onTrackSelection(track: SpotifyTrack) {
+        console.log(track);
+    }
+
 }
