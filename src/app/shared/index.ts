@@ -1,7 +1,6 @@
 export * from './services/api.service';
-export * from './services/post.service';
 
-export * from './models/post';
-export * from './models/track';
-export * from './models/user';
+export * from './models/post.model';
+export * from './models/track.model';
+export * from './models/user.model';
 

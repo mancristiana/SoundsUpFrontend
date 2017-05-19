@@ -11,8 +11,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 
-import { ApiService } from './api.service';
-import { Post } from '../models/post';
+import { ApiService } from '../shared/services/api.service';
+import { Post } from '../shared/models/post.model';
 
 
 @Injectable()

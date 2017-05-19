@@ -8,20 +8,22 @@ import { LoginModule } from './login/login.module';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
-import { HomeModule } from './home/home.module';
+import { HomeComponent } from './home/home.component';
+import { PostModule } from './posts/post.module';
 
 @NgModule({
     declarations: [
         AppComponent,
-        AboutComponent
+        AboutComponent,
+        HomeComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
         AppRoutingModule,
-        HomeModule,
-        LoginModule
+        LoginModule,
+        PostModule
     ],
     providers: [],
     bootstrap: [AppComponent]

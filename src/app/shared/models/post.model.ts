@@ -1,5 +1,5 @@
-import { Track } from './track';
-import { User } from './user';
+import { Track } from './track.model';
+import { User } from './user.model';
 /**
  * Created by mancr on 17-May-17.
  */
