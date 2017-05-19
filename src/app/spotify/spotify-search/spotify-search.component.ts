@@ -1,9 +1,7 @@
 /**
  * Created by mancr on 3/12/2017.
  */
-import { Component, OnInit } from '@angular/core';
-
-import { Observable }        from 'rxjs/Observable';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Subject }           from 'rxjs/Subject';
 
 // Observable class extensions
@@ -17,39 +15,31 @@ import 'rxjs/add/operator/switchMap';
 import { SpotifyTrack } from '../../shared/models/track.model';
 import { SpotifySearchService } from './spotify-search.service';
 
-
-
 @Component({
     selector: 'spotify-search',
-    templateUrl: 'spotify-search.component.html',
-    styleUrls: ['spotify-search.component.less']
+    templateUrl: 'spotify-search.component.html'
 })
 export class SpotifySearchComponent implements OnInit {
-    tracks: Observable<SpotifyTrack[]>;
+    @Output() tracks = new EventEmitter<SpotifyTrack[]>();
     private searchTerms = new Subject<string>();
 
     constructor(private spotifyService: SpotifySearchService) {
+    }
+
+    ngOnInit(): void {
+        this.searchTerms
+            .debounceTime(300)        // wait 300ms after each keystroke before considering the term
+            .distinctUntilChanged()   // ignore if next search term is same as previous
+            // switch to new observable each time the term changes
+            .switchMap(term => this.spotifyService.search(term))
+            .subscribe(
+                (tracks) => this.tracks.emit(tracks),
+                (error) => this.tracks.emit([])
+            );
     }
 
     // Push a search term into the observable stream.
     search(term: string): void {
         this.searchTerms.next(term);
     }
-
-    ngOnInit(): void {
-        this.tracks = this.searchTerms
-            .debounceTime(300)        // wait 300ms after each keystroke before considering the term
-            .distinctUntilChanged()   // ignore if next search term is same as previous
-            .switchMap(term => term   // switch to new observable each time the term changes
-                // return the http search observable
-                ? this.spotifyService.search(term)
-                // or the observable of empty heroes if there was no search term
-                : Observable.of<SpotifyTrack[]>([]))
-            .catch(error => {
-                // TODO: add real error handling
-                console.log(error);
-                return Observable.of<SpotifyTrack[]>([]);
-            });
-    }
-
 }

@@ -17,8 +17,14 @@ export class SpotifySearchService {
     constructor(private http: Http) {}
 
     search(track: string): Observable<SpotifyTrack[]> {
-        return this.http
-            .get(`${this.spotifyApi}v1/search?q=${track}&type=track`)
-            .map(response => response.json().tracks.items as SpotifyTrack[]);
+        console.log("Searching term inside search service", track);
+        if (track) {
+            return this.http
+                .get(`${this.spotifyApi}v1/search?q=${track}&type=track`)
+                .map(response => response.json().tracks.items as SpotifyTrack[]);
+        } else {
+            return Observable.of<SpotifyTrack[]>([]);
+        }
+
     }
 }
