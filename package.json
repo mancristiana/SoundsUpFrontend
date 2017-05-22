@@ -11,16 +11,19 @@
     "clean-start": "npm run clean-install && npm start",
     "ng": "ng",
     "start": "ng serve",
-    "start.prod": "npm run build.prod && http-server dist/",
+    "start.prod": "http-server dist/",
     "build": "ng build",
     "build.prod": "./node_modules/.bin/ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "preinstall": "npm install -g http-server"
+    "preinstall": "npm install -g http-server",
+    "postinstall": "ng build --aot -prod"
+
   },
   "dependencies": {
     "@angular/cli": "1.0.3",
+    "@angular/compiler-cli": "^4.0.0",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
     "@angular/core": "^4.0.0",
@@ -39,7 +42,6 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
