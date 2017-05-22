@@ -9,6 +9,7 @@ import { SpotifyTrack } from '../../shared/models/spotify-track.model';
 import { SpotifyTrackToTrackPipe } from '../../shared/pipes/spotify-track-to-track.pipe';
 import { Track } from '../../shared/models/track.model';
 import { PostService } from '../post.service';
+import { error } from 'util';
 
 
 @Component({
@@ -19,6 +20,7 @@ import { PostService } from '../post.service';
 export class NewPostComponent {
     post: Post;
     isSubmitted: boolean;
+    isCancelled: boolean;
     errorMessage: string;
 
     constructor(private location: Location,
@@ -27,17 +29,22 @@ export class NewPostComponent {
 
         this.post = {
             user: {
-                id: 2 // TODO ADD ACTUAL USER
+                id: 0 // TODO ADD ACTUAL USER
             },
             description: '',
             track: {}
         } as Post;
 
         this.isSubmitted = false;
+        this.isCancelled = false;
         this.errorMessage = '';
     }
 
-    goBack(): void {
+    onCancel(): void {
+        this.isCancelled = true;
+    }
+
+    goBack() : void {
         this.location.back();
     }
 
@@ -50,8 +57,15 @@ export class NewPostComponent {
     }
 
     onSubmit() {
-        this.isSubmitted = true;
-        // TODO this.postService.createPost(this.post);
+        if (!this.isCancelled) {
+            this.isSubmitted = true;
+            this.postService.createPost(this.post).subscribe(
+                (success) => this.goBack(),
+                (error) => this.errorMessage = 'Sorry there was a problem with creating your post. Please try again in a few minutes.'
+            );
+        } else {
+           this.goBack();
+        }
     }
 
     isValidForm(): boolean {
