@@ -1546,9 +1546,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 var ApiService = (function () {
+    // public url = 'http://localhost:8080/api';
     function ApiService() {
-        // public url = 'https://sounds-up-api.herokuapp.com/api';
-        this.url = 'http://localhost:8080/api';
+        this.url = 'https://sounds-up-api.herokuapp.com/api';
     }
     ApiService.prototype.handleError = function (error) {
         console.log('Something went wrong');
