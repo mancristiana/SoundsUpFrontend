@@ -10,6 +10,7 @@ import { NewPostComponent } from './new-post/new-post.component';
 import { PostService } from './post.service';
 import { SpotifyModule } from '../spotify/spotify.module';
 import { SharedModule } from '../shared/shared.module';
+import { SpotifyTrackToTrackPipe } from '../shared/pipes/spotify-track-to-track.pipe';
 
 @NgModule({
     imports: [
@@ -20,7 +21,8 @@ import { SharedModule } from '../shared/shared.module';
         SharedModule
     ],
     providers: [
-        PostService
+        PostService,
+        SpotifyTrackToTrackPipe
     ],
     // Make components, directives available inside post module
     declarations: [
