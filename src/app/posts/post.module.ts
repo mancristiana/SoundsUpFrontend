@@ -9,7 +9,6 @@ import { NewPostComponent } from './new-post/new-post.component';
 
 import { PostService } from './post.service';
 import { SpotifyModule } from '../spotify/spotify.module';
-import { SharedModule } from '../shared/shared.module';
 import { SpotifyTrackToTrackPipe } from '../shared/pipes/spotify-track-to-track.pipe';
 
 @NgModule({
@@ -17,8 +16,7 @@ import { SpotifyTrackToTrackPipe } from '../shared/pipes/spotify-track-to-track.
         BrowserModule,
         HttpModule,
         FormsModule,
-        SpotifyModule,
-        SharedModule
+        SpotifyModule
     ],
     providers: [
         PostService,
