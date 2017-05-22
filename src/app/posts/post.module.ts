@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { PostListComponent } from './post-list/post-list.component';
 import { PostComponent } from './post/post.component';
@@ -15,6 +16,7 @@ import { SpotifyTrackToTrackPipe } from '../shared/pipes/spotify-track-to-track.
     imports: [
         BrowserModule,
         HttpModule,
+        FormsModule,
         SpotifyModule
     ],
     providers: [

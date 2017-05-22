@@ -7,16 +7,18 @@
     </div>
 
 
-    <form>
+    <form (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label>Step 1: Select your favourite song</label>
             <spotify-track-selector (selected)="onTrackSelection($event)"></spotify-track-selector>
         </div>
 
         <div class="form-group">
-            <label for="description">Step 2: Add a caption</label>
-            <textarea id="description" class="form-control" placeholder="Write your caption here"></textarea>
+            <label>Step 2: Add a caption</label>
+            <textarea [(ngModel)]="post.description" name="description"  class="form-control" placeholder="Write your caption here"></textarea>
         </div>
+
+        <div [hidden]="!isSubmitted || isValidForm()" class="alert alert-danger" role="alert"><span>Oh Snap!</span> {{errorMessage}}</div>
 
         <button type="submit" class="btn btn-primary">Save
             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
