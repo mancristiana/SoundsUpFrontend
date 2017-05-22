@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { PostModule } from './posts/post.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { PostModule } from './posts/post.module';
         FormsModule,
         HttpModule,
         AppRoutingModule,
+        SharedModule,
         LoginModule,
         PostModule
     ],

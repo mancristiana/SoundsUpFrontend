@@ -12,8 +12,8 @@ import { Post } from '../../shared/models/post.model';
 export class PostComponent implements AfterViewInit {
     @Input() post: Post;
     @Output() init: EventEmitter<any> = new EventEmitter();
-    private isPlaying: boolean = false;
-    private audio: any;
+    isPlaying: boolean = false;
+    audio: any;
 
     ngAfterViewInit() {
         this.init.emit(null);
