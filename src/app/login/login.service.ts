@@ -14,6 +14,7 @@ import {
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { LoginComponent } from './login.component';
 
 declare const gapi: any;
 
@@ -34,9 +35,13 @@ export class LoginService {
 
     private googleAuth: any;
     public googleUser: any;
-
+    private signInHandler: LoginComponent;
 
     constructor(private http: Http) {
+    }
+
+    public setSignInHandler(component: LoginComponent) {
+        this.signInHandler = component;
     }
 
     public googleInit(element) {
@@ -55,36 +60,21 @@ export class LoginService {
 
     private googleSignIn(googleUser: any) {
 
+        console.log("SIGN IN WAS CLICKED");
+
         this.googleUser = googleUser;
-
-        console.log(this.googleUser);
-        let profile = googleUser.getBasicProfile();
         let token = googleUser.getAuthResponse().id_token;
-
-        console.log('ID: ' + profile.getId());
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail());
-
         // YOUR CODE HERE
-        this.verifyToken(token)
-            .subscribe(
-                t => console.log('TOKEN = ', t),
-                err => console.log('ERROR = ', err)
-            );
+        // this.verifyToken(token)
+        //     .subscribe(
+        //         t => console.log('TOKEN = ', t),
+        //         err => console.log('ERROR = ', err)
+        //     );
+
+
+        // Call sign in handler to do something in the component
+        this.signInHandler.onSignIn(googleUser);
     }
-
-    public printUserDetails() {
-        let googleUser = this.googleUser;
-
-        let profile = googleUser.getBasicProfile();
-
-        console.log('ID: ' + profile.getId());
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail());
-    }
-
 
     private verifyToken(token: string): Observable<any> {
         console.log('Verifying token = ', token);
@@ -111,7 +101,10 @@ export class LoginService {
     }
 
     public googleIsSignedIn() {
-        return this.googleUser.isSignedIn();
+        if(this.googleUser) {
+            return this.googleUser.isSignedIn();
+        }
+        return false;
     }
 
     public googleSignOut() {
@@ -119,9 +112,7 @@ export class LoginService {
         gapi.load('auth2', () => {
             loginService.googleAuth = gapi.auth2.getAuthInstance();
             loginService.googleAuth.signOut().then(() => {
-                console.log('User signed out.');
-                loginService.printUserDetails();
-                console.log(loginService.googleIsSignedIn());
+                loginService.signInHandler.onSignOut();
             });
         });
     }

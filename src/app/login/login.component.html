@@ -1,4 +1,9 @@
-<p>
-    <button #googleSignIn id="googleSignIn" class="btn btn-google">Sign in with Google</button>
-    <button id="googleSignOut" class="btn btn-google" (click)="onSignOut()">Sign out</button>
-</p>
+<span [hidden]="isSignedIn">
+    <button #googleSignIn id="googleSignIn" class="btn btn-default navbar-btn">Sign in with Google</button>
+</span>
+
+
+<span [hidden]="!isSignedIn">
+    <p class="navbar-text">Signed in as {{name}}</p>
+    <button id="googleSignOut" class="btn btn-default navbar-btn" (click)="onSignOutClicked()">Sign out</button>
+</span>
