@@ -1,6 +1,6 @@
 webpackJsonp([1,5],{
 
-/***/ 102:
+/***/ 103:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -9,12 +9,12 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 102;
+webpackEmptyContext.id = 103;
 
 
 /***/ }),
 
-/***/ 103:
+/***/ 104:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -41,9 +41,9 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home_component__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about_about_component__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__posts_new_post_new_post_component__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home_component__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about_about_component__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__posts_new_post_new_post_component__ = __webpack_require__(70);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -128,13 +128,13 @@ AppComponent = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_routing_module__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login_module__ = __webpack_require__(118);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__about_about_component__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__home_home_component__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__about_about_component__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__home_home_component__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__posts_post_module__ = __webpack_require__(120);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -187,7 +187,7 @@ AppModule = __decorate([
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_service__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_service__ = __webpack_require__(69);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -264,7 +264,7 @@ var _a, _b, _c;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_component__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_service__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_service__ = __webpack_require__(69);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -309,7 +309,7 @@ LoginModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_masonry_layout__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_masonry_layout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_masonry_layout__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__post_service__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__post_service__ = __webpack_require__(35);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -380,13 +380,14 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__post_list_post_list_component__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__post_post_component__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__new_post_new_post_component__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__post_service__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__spotify_spotify_module__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_pipes_spotify_track_to_track_pipe__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__post_list_post_list_component__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__post_post_component__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__new_post_new_post_component__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__post_service__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__spotify_spotify_module__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shared_pipes_spotify_track_to_track_pipe__ = __webpack_require__(36);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -394,6 +395,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -414,23 +416,24 @@ PostModule = __decorate([
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_8__spotify_spotify_module__["a" /* SpotifyModule */]
+            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_9__spotify_spotify_module__["a" /* SpotifyModule */]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_6__post_service__["a" /* PostService */],
-            __WEBPACK_IMPORTED_MODULE_7__shared__["a" /* ApiService */],
-            __WEBPACK_IMPORTED_MODULE_9__shared_pipes_spotify_track_to_track_pipe__["a" /* SpotifyTrackToTrackPipe */]
+            __WEBPACK_IMPORTED_MODULE_7__post_service__["a" /* PostService */],
+            __WEBPACK_IMPORTED_MODULE_8__shared__["a" /* ApiService */],
+            __WEBPACK_IMPORTED_MODULE_10__shared_pipes_spotify_track_to_track_pipe__["a" /* SpotifyTrackToTrackPipe */]
         ],
         // Make components, directives available inside post module
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_3__post_list_post_list_component__["a" /* PostListComponent */],
-            __WEBPACK_IMPORTED_MODULE_4__post_post_component__["a" /* PostComponent */],
-            __WEBPACK_IMPORTED_MODULE_5__new_post_new_post_component__["a" /* NewPostComponent */]
+            __WEBPACK_IMPORTED_MODULE_4__post_list_post_list_component__["a" /* PostListComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__post_post_component__["a" /* PostComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__new_post_new_post_component__["a" /* NewPostComponent */]
         ],
         // Make components, directives, pipes available outside post module
         exports: [
-            __WEBPACK_IMPORTED_MODULE_3__post_list_post_list_component__["a" /* PostListComponent */],
-            __WEBPACK_IMPORTED_MODULE_5__new_post_new_post_component__["a" /* NewPostComponent */]
+            __WEBPACK_IMPORTED_MODULE_4__post_list_post_list_component__["a" /* PostListComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__new_post_new_post_component__["a" /* NewPostComponent */]
         ],
         bootstrap: []
     })
@@ -445,7 +448,7 @@ PostModule = __decorate([
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_models_post_model__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_models_post_model__ = __webpack_require__(71);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -464,9 +467,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var PostComponent = (function () {
     function PostComponent() {
         this.init = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* EventEmitter */]();
+        this.isPlaying = false;
     }
     PostComponent.prototype.ngAfterViewInit = function () {
         this.init.emit(null);
+        this.audio = new Audio();
+        this.audio.src = this.post.track.previewUrl;
+    };
+    PostComponent.prototype.toggleAudio = function () {
+        if (this.isPlaying) {
+            this.audio.pause();
+        }
+        else {
+            this.audio.play();
+        }
+        this.isPlaying = !this.isPlaying;
     };
     return PostComponent;
 }());
@@ -483,8 +498,7 @@ PostComponent = __decorate([
         selector: 'post',
         template: __webpack_require__(208),
         styles: [__webpack_require__(189)]
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], PostComponent);
 
 var _a, _b;
@@ -496,17 +510,17 @@ var _a, _b;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_api_service__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_api_service__ = __webpack_require__(73);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__services_api_service__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_post_model__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_post_model__ = __webpack_require__(71);
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_track_model__ = __webpack_require__(123);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_spotify_track_model__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_spotify_track_model__ = __webpack_require__(72);
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_user_model__ = __webpack_require__(124);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_spotify_track_to_track_pipe__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_spotify_track_to_track_pipe__ = __webpack_require__(36);
 /* unused harmony namespace reexport */
 
 
@@ -563,7 +577,7 @@ var User = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_of__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_debounceTime__ = __webpack_require__(219);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_debounceTime__);
@@ -571,7 +585,7 @@ var User = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_distinctUntilChanged___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_distinctUntilChanged__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_switchMap__ = __webpack_require__(221);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_switchMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__spotify_search_service__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__spotify_search_service__ = __webpack_require__(74);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SpotifySearchComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -734,7 +748,7 @@ SpotifyTrackSelectorComponent = __decorate([
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_models_spotify_track_model__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_models_spotify_track_model__ = __webpack_require__(72);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SpotifyTrackComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -805,7 +819,7 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__spotify_search_spotify_search_service__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__spotify_search_spotify_search_service__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__spotify_search_spotify_search_component__ = __webpack_require__(125);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__spotify_track_selector_spotify_track_selector_component__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__spotify_track_list_spotify_track_list_component__ = __webpack_require__(126);
@@ -1032,7 +1046,7 @@ module.exports = "<span [hidden]=\"isSignedIn\">\r\n    <button #googleSignIn id
 /***/ 206:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-6 col-lg-4 col-md-offset-3 col-lg-offset-4\">\r\n\r\n    <div class=\"page-header\">\r\n        <h1>Create a new post\r\n            <small>Share your favourite songs!</small>\r\n        </h1>\r\n    </div>\r\n\r\n\r\n    <form>\r\n        <div class=\"form-group\">\r\n            <label>Step 1: Select your favourite song</label>\r\n            <spotify-track-selector (selected)=\"onTrackSelection($event)\"></spotify-track-selector>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label for=\"description\">Step 2: Add a caption</label>\r\n            <textarea id=\"description\" class=\"form-control\" placeholder=\"Write your caption here\"></textarea>\r\n        </div>\r\n\r\n        <button type=\"submit\" class=\"btn btn-primary\">Save\r\n            <span class=\"glyphicon glyphicon-ok\" aria-hidden=\"true\"></span>\r\n        </button>\r\n        <button class=\"btn btn-default\" (click)=\"goBack()\">Cancel\r\n            <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>\r\n        </button>\r\n    </form>\r\n</div>\r\n"
+module.exports = "<div class=\"col-md-6 col-lg-4 col-md-offset-3 col-lg-offset-4\">\r\n\r\n    <div class=\"page-header\">\r\n        <h1>Create a new post\r\n            <small>Share your favourite songs!</small>\r\n        </h1>\r\n    </div>\r\n\r\n\r\n    <form (ngSubmit)=\"onSubmit()\" #newPostForm=\"ngForm\">\r\n        <div class=\"form-group\">\r\n            <label>Step 1: Select your favourite song</label>\r\n            <spotify-track-selector (selected)=\"onTrackSelection($event)\"></spotify-track-selector>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <label>Step 2: Add a caption</label>\r\n            <textarea [(ngModel)]=\"post.description\" name=\"description\"  class=\"form-control\" placeholder=\"Write your caption here\"></textarea>\r\n        </div>\r\n\r\n        <div [hidden]=\"!isSubmitted || isValidForm()\" class=\"alert alert-danger\" role=\"alert\"><span>Oh Snap!</span> {{errorMessage}}</div>\r\n\r\n        <button type=\"submit\" class=\"btn btn-primary\">Save\r\n            <span class=\"glyphicon glyphicon-ok\" aria-hidden=\"true\"></span>\r\n        </button>\r\n        <button class=\"btn btn-default\" (click)=\"newPostForm.reset(); onCancel()\">Cancel\r\n            <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>\r\n        </button>\r\n    </form>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1046,7 +1060,7 @@ module.exports = "<div class=\"container-fluid\">\r\n    <div #masonryElementRef
 /***/ 208:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"thumbnail\">\r\n    <img [src]=\"post.track.album.imageUrl\" alt=\"Album Image\">\r\n    <div class=\"caption\">\r\n        <h3>{{post.track.name}}</h3>\r\n        <h4>by {{post.track.artist.name}}</h4>\r\n        <h5>{{post.track.album.name}}</h5>\r\n        <button class=\"btn btn-primary\">\r\n            <span class=\"glyphicon glyphicon-play\" aria-hidden=\"true\"></span>\r\n        </button>\r\n    </div>\r\n    <div class=\"post-description\">\r\n        <p>\r\n            {{post.description}}\r\n        </p>\r\n        <p><span class=\"pull-right\"> - {{post.user.name}}</span></p>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"thumbnail\">\r\n    <img [src]=\"post.track.album.imageUrl\" alt=\"Album Image\">\r\n    <div class=\"caption\">\r\n        <h3>{{post.track.name}}</h3>\r\n        <h4>by {{post.track.artist.name}}</h4>\r\n        <h5>{{post.track.album.name}}</h5>\r\n        <button class=\"btn btn-primary\" (click)=\"toggleAudio()\">\r\n            <span class=\"glyphicon\"\r\n                  [ngClass]=\"{\r\n                  'glyphicon-play': !isPlaying,\r\n                  'glyphicon-pause': isPlaying }\"\r\n                  aria-hidden=\"true\">\r\n            </span>\r\n        </button>\r\n    </div>\r\n    <div class=\"post-description\">\r\n        <p>\r\n            {{post.description}}\r\n        </p>\r\n        <p><span class=\"pull-right\"> - {{post.user.name}}</span></p>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1081,12 +1095,84 @@ module.exports = "<div class=\"media\">\r\n    <div class=\"media-left\">\r\n   
 /***/ 257:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(103);
+module.exports = __webpack_require__(104);
 
 
 /***/ }),
 
 /***/ 35:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_api_service__ = __webpack_require__(73);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostService; });
+/**
+ * Created by mancr on 17-May-17.
+ */
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var PostService = (function () {
+    function PostService(http, apiService) {
+        this.http = http;
+        this.apiService = apiService;
+        this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-Type': 'application/json' });
+        this.url = this.apiService.url + '/posts';
+    }
+    PostService.prototype.getAllPosts = function () {
+        return this.http.get(this.url)
+            .map(function (response) {
+            return response.json();
+        })
+            .catch(this.apiService.handleError);
+    };
+    PostService.prototype.createPost = function (post) {
+        var body = JSON.stringify(post);
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* RequestOptions */]({
+            headers: this.headers
+        });
+        return this.http.post(this.url, body, options)
+            .map(function (response) {
+            var responseMessage = response.json();
+            console.log(response);
+            console.log(responseMessage);
+            return responseMessage;
+        })
+            .catch(this.apiService.handleError);
+    };
+    return PostService;
+}());
+PostService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["f" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__shared_services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__shared_services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
+], PostService);
+
+var _a, _b;
+//# sourceMappingURL=post.service.js.map
+
+/***/ }),
+
+/***/ 36:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1133,7 +1219,7 @@ SpotifyTrackToTrackPipe = __decorate([
 
 /***/ }),
 
-/***/ 65:
+/***/ 67:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1170,7 +1256,7 @@ AboutComponent = __decorate([
 
 /***/ }),
 
-/***/ 66:
+/***/ 68:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1200,17 +1286,17 @@ HomeComponent = __decorate([
 
 /***/ }),
 
-/***/ 67:
+/***/ 69:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_toPromise__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_toPromise__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_toPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1275,8 +1361,8 @@ var LoginService = (function () {
     LoginService.prototype.verifyToken = function (token) {
         console.log('Verifying token = ', token);
         var apiUrl = 'http://localhost:8080/api/users';
-        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* Headers */]({ 'Content-Type': 'application/json' });
-        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Headers */]({ 'Content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* RequestOptions */]({ headers: headers });
         var body = JSON.stringify({ id_token: token });
         return this.http.post(apiUrl, body, options)
             .map(function (res) {
@@ -1310,7 +1396,7 @@ var LoginService = (function () {
 }());
 LoginService = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["f" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* Http */]) === "function" && _a || Object])
 ], LoginService);
 
 var _a;
@@ -1318,13 +1404,14 @@ var _a;
 
 /***/ }),
 
-/***/ 68:
+/***/ 70:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_pipes_spotify_track_to_track_pipe__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_pipes_spotify_track_to_track_pipe__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__post_service__ = __webpack_require__(35);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewPostComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1341,20 +1428,57 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var NewPostComponent = (function () {
-    function NewPostComponent(location, trackPipe) {
+    function NewPostComponent(location, trackPipe, postService) {
         this.location = location;
         this.trackPipe = trackPipe;
-        this.post = {};
+        this.postService = postService;
+        this.post = {
+            user: {
+                id: 0 // TODO ADD ACTUAL USER
+            },
+            description: '',
+            track: {}
+        };
+        this.isSubmitted = false;
+        this.isCancelled = false;
+        this.errorMessage = '';
     }
+    NewPostComponent.prototype.onCancel = function () {
+        this.isCancelled = true;
+    };
     NewPostComponent.prototype.goBack = function () {
         this.location.back();
     };
     NewPostComponent.prototype.onTrackSelection = function (spotifyTrack) {
-        var track = this.trackPipe.transform(spotifyTrack);
+        var track = {};
+        if (spotifyTrack) {
+            track = this.trackPipe.transform(spotifyTrack);
+        }
         this.post.track = track;
-        console.log(track);
-        console.log(this.post);
+    };
+    NewPostComponent.prototype.onSubmit = function () {
+        var _this = this;
+        if (!this.isCancelled) {
+            this.isSubmitted = true;
+            this.postService.createPost(this.post).subscribe(function (success) { return _this.goBack(); }, function (error) { return _this.errorMessage = 'Sorry there was a problem with creating your post. Please try again in a few minutes.'; });
+        }
+        else {
+            this.goBack();
+        }
+    };
+    NewPostComponent.prototype.isValidForm = function () {
+        if (!this.post.track.name) {
+            this.errorMessage = 'Please select a track';
+        }
+        else if (this.post.description === '') {
+            this.errorMessage = 'Please enter your description';
+        }
+        else {
+            this.errorMessage = '';
+        }
+        return this.errorMessage === '';
     };
     return NewPostComponent;
 }());
@@ -1364,72 +1488,15 @@ NewPostComponent = __decorate([
         template: __webpack_require__(206),
         styles: [__webpack_require__(187)]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common__["a" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common__["a" /* Location */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_pipes_spotify_track_to_track_pipe__["a" /* SpotifyTrackToTrackPipe */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__shared_pipes_spotify_track_to_track_pipe__["a" /* SpotifyTrackToTrackPipe */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common__["a" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common__["a" /* Location */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__shared_pipes_spotify_track_to_track_pipe__["a" /* SpotifyTrackToTrackPipe */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__shared_pipes_spotify_track_to_track_pipe__["a" /* SpotifyTrackToTrackPipe */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__post_service__["a" /* PostService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__post_service__["a" /* PostService */]) === "function" && _c || Object])
 ], NewPostComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=new-post.component.js.map
 
 /***/ }),
 
-/***/ 69:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_services_api_service__ = __webpack_require__(72);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostService; });
-/**
- * Created by mancr on 17-May-17.
- */
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-var PostService = (function () {
-    function PostService(http, apiService) {
-        this.http = http;
-        this.apiService = apiService;
-    }
-    PostService.prototype.getAllPosts = function () {
-        var endpointUrl = this.apiService.url + '/posts';
-        return this.http.get(endpointUrl)
-            .map(function (response) {
-            return response.json();
-        })
-            .catch(this.apiService.handleError);
-    };
-    return PostService;
-}());
-PostService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["f" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__shared_services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__shared_services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
-], PostService);
-
-var _a, _b;
-//# sourceMappingURL=post.service.js.map
-
-/***/ }),
-
-/***/ 70:
+/***/ 71:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1447,7 +1514,7 @@ var Post = (function () {
 
 /***/ }),
 
-/***/ 71:
+/***/ 72:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1462,7 +1529,7 @@ var SpotifyTrack = (function () {
 
 /***/ }),
 
-/***/ 72:
+/***/ 73:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1479,9 +1546,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 var ApiService = (function () {
-    // public url = 'http://localhost:8080/api';
     function ApiService() {
-        this.url = 'https://sounds-up-api.herokuapp.com/api';
+        // public url = 'https://sounds-up-api.herokuapp.com/api';
+        this.url = 'http://localhost:8080/api';
     }
     ApiService.prototype.handleError = function (error) {
         console.log('Something went wrong');
@@ -1499,7 +1566,7 @@ ApiService = __decorate([
 
 /***/ }),
 
-/***/ 73:
+/***/ 74:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1507,7 +1574,7 @@ ApiService = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SpotifySearchService; });
 /**
@@ -1545,7 +1612,7 @@ var SpotifySearchService = (function () {
 }());
 SpotifySearchService = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["f" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */]) === "function" && _a || Object])
 ], SpotifySearchService);
 
 var _a;
