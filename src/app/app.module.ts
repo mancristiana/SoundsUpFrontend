@@ -7,21 +7,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './login/login.module';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+import { PostModule } from './posts/post.module';
 
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent,
-        AboutComponent
+        AboutComponent,
+        HomeComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
         AppRoutingModule,
-        LoginModule
+        LoginModule,
+        PostModule
     ],
     providers: [],
     bootstrap: [AppComponent]

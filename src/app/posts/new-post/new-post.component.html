@@ -1,0 +1,31 @@
+<div class="col-md-6 col-lg-4 col-md-offset-3 col-lg-offset-4">
+
+    <div class="page-header">
+        <h1>Create a new post
+            <small>Share your favourite songs!</small>
+        </h1>
+    </div>
+
+
+    <form (ngSubmit)="onSubmit()" #newPostForm="ngForm">
+        <div class="form-group">
+            <label>Step 1: Select your favourite song</label>
+            <spotify-track-selector (selected)="onTrackSelection($event)"></spotify-track-selector>
+        </div>
+
+        <div class="form-group">
+            <label>Step 2: Add a caption</label>
+            <textarea [(ngModel)]="post.description" name="description"  class="form-control" placeholder="Write your caption here"></textarea>
+        </div>
+
+        <div [hidden]="!isSubmitted || isValidForm()" class="alert alert-danger" role="alert"><span>Oh Snap!</span> {{errorMessage}}</div>
+
+        <button type="submit" class="btn btn-primary">Save
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </button>
+        <button class="btn btn-default" (click)="newPostForm.reset(); onCancel()">Cancel
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+    </form>
+
+</div>

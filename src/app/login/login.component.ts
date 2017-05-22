@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild, NgZone } from '@angular/core';
 import { LoginService } from './login.service';
 
 
@@ -8,21 +8,49 @@ import { LoginService } from './login.service';
 })
 export class LoginComponent implements AfterViewInit {
     @ViewChild('googleSignIn') signInButton: ElementRef;
+    name: string;
+    isSignedIn: boolean;
 
-    constructor(private loginService: LoginService) {}
+    constructor(private loginService: LoginService, private zone: NgZone) {
+        this.isSignedIn = this.loginService.googleIsSignedIn();
+        console.log('constructor name', this.name);
+    }
 
     ngAfterViewInit() {
+        this.loginService.setSignInHandler(this);
         this.loginService.googleInit(this.signInButton.nativeElement);
     }
 
-    onSignOut() {
+    public onSignIn(googleUser: any) {
 
-        console.log('DETAILS');
-        this.loginService.printUserDetails();
-        console.log('Is logged in?: ', this.loginService.googleIsSignedIn());
-        console.log('On sign out');
+        let profile = googleUser.getBasicProfile();
+        // let token = googleUser.getAuthResponse().id_token;
+
+        console.log('ID: ' + profile.getId());
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail());
+
+        this.zone.run(() => {
+            this.name = profile.getName();
+            console.log('zone name', this.name);
+            this.isSignedIn = this.loginService.googleIsSignedIn();
+            console.log('zone is signed in?', this.isSignedIn);
+        });
+
+
+    }
+
+    public onSignOutClicked() {
         this.loginService.googleSignOut();
-        console.log('Is logged in?: ', this.loginService.googleIsSignedIn());
+    }
+
+    public onSignOut() {
+        this.zone.run(() => {
+            console.log('User signed out.');
+            this.isSignedIn = this.loginService.googleIsSignedIn();
+            console.log('zone Is logged in?: ', this.loginService.googleIsSignedIn());
+        });
     }
 
 }
