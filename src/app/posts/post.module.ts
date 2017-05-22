@@ -8,21 +8,19 @@ import { PostComponent } from './post/post.component';
 import { NewPostComponent } from './new-post/new-post.component';
 
 import { PostService } from './post.service';
-import { ApiService } from '../shared';
 import { SpotifyModule } from '../spotify/spotify.module';
-import { SpotifyTrackToTrackPipe } from '../shared/pipes/spotify-track-to-track.pipe';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
         FormsModule,
-        SpotifyModule
+        SpotifyModule,
+        SharedModule
     ],
     providers: [
-        PostService,
-        ApiService,
-        SpotifyTrackToTrackPipe
+        PostService
     ],
     // Make components, directives available inside post module
     declarations: [
