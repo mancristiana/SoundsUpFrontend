@@ -1,0 +1,12 @@
+<div *ngIf="selectedTrack">
+    <spotify-track [track]="selectedTrack" [hasUnselectionButton]="true" (trackUnselected)="onTrackSelection()"></spotify-track>
+</div>
+<div *ngIf="selectedTrack === undefined">
+    <spotify-search (tracks)="setTracks($event)"></spotify-search>
+
+    <spotify-track-list [tracks]="tracks" (trackSelected)="onTrackSelection($event)"></spotify-track-list>
+
+</div>
+
+
+

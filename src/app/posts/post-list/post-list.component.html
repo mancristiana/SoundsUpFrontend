@@ -1,0 +1,7 @@
+<div class="container-fluid">
+    <div #masonryElementRef class="masonry">
+        <div *ngFor="let post of posts" class="masonry-item">
+            <post [post]="post" (init)="loadMasonry()"></post>
+        </div>
+    </div>
+</div>

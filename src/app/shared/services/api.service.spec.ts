@@ -8,6 +8,6 @@ describe('Api Service', () => {
     });
 
     it('should ...', inject([ApiService], (api) => {
-        expect(api.title).toBe('Angular 2');
+        expect(api.url).toBe('https://sounds-up-api.herokuapp.com/api');
     }));
 });
