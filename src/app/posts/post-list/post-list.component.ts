@@ -17,6 +17,7 @@ export class PostListComponent implements OnInit {
     masonry: any;
     masonryOptions;
     posts: Post[];
+    counter = 0;
 
     constructor(private postService: PostService) {
     }
@@ -26,10 +27,16 @@ export class PostListComponent implements OnInit {
             .subscribe(
                 (posts) => {
                     this.posts = posts;
-                    console.log("Got posts");
                 },
                 (error) => console.log(error)
             );
+    }
+
+    onItemReady() {
+        this.counter++;
+        if(this.counter === this.posts.length) {
+            this.loadMasonry();
+        }
     }
 
     loadMasonry() {
@@ -44,11 +51,22 @@ export class PostListComponent implements OnInit {
         // Initialize Masonry
         this.masonry = new masonry(this.masonryElementRef.nativeElement, this.masonryOptions);
 
-        setTimeout(() => {
-            this.masonry.layout();
-        });
+
+        // Hack masonry images not loaded
+        let count = 0;
+        let interval = setInterval(()=> {
+            if(count === 5) {
+                clearInterval(interval);
+            } else {
+                this.updateMasonry();
+                count++;
+            }
+        }, 1000);
 
     }
 
+    updateMasonry() {
+        this.masonry.layout();
+    }
 
 }
