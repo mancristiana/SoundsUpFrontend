@@ -10,25 +10,25 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { PostModule } from './posts/post.module';
-import { SharedModule } from './shared/shared.module';
+import { SpotifyTrackToTrackPipe } from './shared/pipes/spotify-track-to-track.pipe';
+import { ApiService } from './shared/services/api.service';
 
 @NgModule({
     declarations: [
         AppComponent,
         AboutComponent,
-        HomeComponent
+        HomeComponent,
+        SpotifyTrackToTrackPipe
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
         AppRoutingModule,
-        SharedModule,
         LoginModule,
         PostModule
     ],
-    providers: [],
+    providers: [ApiService],
     bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}
