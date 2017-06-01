@@ -17,7 +17,7 @@ describe('Spotify Search Service', () => {
     describe('search()', () => {
 
         it('Spotify Api Url should be', inject([SpotifySearchService], (api) => {
-            expect(api.spotifyApi).toBe('https://api.spotify.com/');
+            expect(api.spotifyApi).toBe('https://api.spotify.com');
 
         }));
 
