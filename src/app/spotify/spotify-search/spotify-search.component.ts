@@ -27,6 +27,8 @@ export class SpotifySearchComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.spotifyService.fetchApplicationToken();
+
         this.searchTerms
             .debounceTime(300)        // wait 300ms after each keystroke before considering the term
             .distinctUntilChanged()   // ignore if next search term is same as previous
