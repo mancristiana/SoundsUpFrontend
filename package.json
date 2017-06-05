@@ -11,7 +11,7 @@
     "clean-install": "npm run clean && npm install",
     "clean-start": "npm run clean-install && npm start",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 3000",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
