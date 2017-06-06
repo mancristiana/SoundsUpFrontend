@@ -3,6 +3,7 @@ import { Http, Headers, RequestOptions, URLSearchParams } from "@angular/http";
 
 import { Observable }     from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/observable/of';
 
 import { SpotifyTrack } from '../../shared/models/spotify-track.model';
 import { ApiService } from '../../shared/services/api.service';
