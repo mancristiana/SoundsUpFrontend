@@ -1,0 +1,6 @@
+<button class="btn btn-primary" (click)="toggleAudio()">
+    <span class="glyphicon" [ngClass]="{
+          'glyphicon-play': !isPlaying,
+          'glyphicon-pause': isPlaying }" aria-hidden="true">
+    </span>
+</button>

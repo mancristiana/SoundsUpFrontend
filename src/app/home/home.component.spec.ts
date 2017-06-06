@@ -1,26 +1,44 @@
-// This shows a different way of testing a component, check about for a simpler one
-import { Component } from '@angular/core';
-
-import { TestBed } from '@angular/core/testing';
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { DebugElement, Component } from '@angular/core';
+import { By } from '@angular/platform-browser';
 
 import { HomeComponent } from './home.component';
 
-describe('Home Component', () => {
-    const html = '<my-home></my-home>';
+@Component({selector: 'post-list', template: ''})
+export class PostListStubComponent { }
+
+describe('HomeComponent', () => {
+    let component: HomeComponent;
+    let fixture: ComponentFixture<HomeComponent>;
+    let title: DebugElement;
+
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            imports: [RouterTestingModule],
+            declarations: [HomeComponent, PostListStubComponent]
+        }).compileComponents();
+    }));
 
     beforeEach(() => {
-        TestBed.configureTestingModule({declarations: [HomeComponent, TestComponent]});
-        TestBed.overrideComponent(TestComponent, {set: {template: html}});
+        fixture = TestBed.createComponent(HomeComponent);
+        component = fixture.componentInstance;
+        title = fixture.debugElement.query(By.css('h1'));
+
+        // Trigger initial data binding
+        fixture.detectChanges();
     });
 
-    it('should ...', () => {
-        const fixture = TestBed.createComponent(TestComponent);
-        fixture.detectChanges();
-        expect(fixture.nativeElement.children[0].textContent).toContain('Home Works!');
+    it('should be created', () => {
+        expect(component).toBeTruthy();
     });
+
+    it('should have a main title', () => {
+
+        expect(title.nativeElement.textContent).toContain('Post page');
+    });
+
 
 });
 
-@Component({selector: 'my-test', template: ''})
-class TestComponent {
-}
+

@@ -10,6 +10,7 @@ import { NewPostComponent } from './new-post/new-post.component';
 import { PostService } from './post.service';
 import { SpotifyModule } from '../spotify/spotify.module';
 import { SpotifyTrackToTrackPipe } from '../shared/pipes/spotify-track-to-track.pipe';
+import { PostAudioComponent } from './post-audio/post-audio.component';
 
 @NgModule({
     imports: [
@@ -26,7 +27,8 @@ import { SpotifyTrackToTrackPipe } from '../shared/pipes/spotify-track-to-track.
     declarations: [
         PostListComponent,
         PostComponent,
-        NewPostComponent
+        NewPostComponent,
+        PostAudioComponent
     ],
     // Make components, directives, pipes available outside post module
     exports: [
