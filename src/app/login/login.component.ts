@@ -13,7 +13,6 @@ export class LoginComponent implements AfterViewInit {
 
     constructor(private loginService: LoginService, private zone: NgZone) {
         this.isSignedIn = this.loginService.googleIsSignedIn();
-        console.log('constructor name', this.name);
     }
 
     ngAfterViewInit() {

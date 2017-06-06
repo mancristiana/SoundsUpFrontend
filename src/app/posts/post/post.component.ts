@@ -17,8 +17,10 @@ export class PostComponent implements AfterViewInit {
 
     ngAfterViewInit() {
         this.init.emit(null);
-        this.audio = new Audio();
-        this.audio.src = this.post.track.previewUrl;
+        if(this.post.track.previewUrl) {
+            this.audio = new Audio();
+            this.audio.src = this.post.track.previewUrl;
+        }
     }
 
     toggleAudio() {
