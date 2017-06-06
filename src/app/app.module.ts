@@ -12,10 +12,12 @@ import { HomeComponent } from './home/home.component';
 import { PostModule } from './posts/post.module';
 import { SpotifyTrackToTrackPipe } from './shared/pipes/spotify-track-to-track.pipe';
 import { ApiService } from './shared/services/api.service';
+import { AppHeaderComponent } from './app-header/app-header.component';
 
 @NgModule({
     declarations: [
         AppComponent,
+        AppHeaderComponent,
         AboutComponent,
         HomeComponent,
         SpotifyTrackToTrackPipe
