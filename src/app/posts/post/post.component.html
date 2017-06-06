@@ -4,14 +4,7 @@
         <h3>{{post.track.name}}</h3>
         <h4>by {{post.track.artist.name}}</h4>
         <h5>{{post.track.album.name}}</h5>
-        <button *ngIf="post.track.previewUrl" class="btn btn-primary" (click)="toggleAudio()">
-            <span class="glyphicon"
-                  [ngClass]="{
-                  'glyphicon-play': !isPlaying,
-                  'glyphicon-pause': isPlaying }"
-                  aria-hidden="true">
-            </span>
-        </button>
+        <post-audio *ngIf="post.track.previewUrl" [trackUrl]="post.track.previewUrl"></post-audio>
     </div>
     <div class="post-description">
         <p>
