@@ -7,7 +7,7 @@ describe('About Component', () => {
         TestBed.configureTestingModule({declarations: [AboutComponent]});
     });
 
-    it('should ...', () => {
+    it('should show success message', () => {
         const fixture = TestBed.createComponent(AboutComponent);
         fixture.detectChanges();
         expect(fixture.nativeElement.children[0].textContent).toContain('About Works!');
