@@ -5,13 +5,14 @@ import { HttpModule,
     Response,
     ResponseOptions,
     XHRBackend } from '@angular/http';
+import { ApiService } from '../../shared/services/api.service';
 
 
 describe('Spotify Search Service', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             imports: [HttpModule],
-            providers: [SpotifySearchService]}
+            providers: [SpotifySearchService, ApiService]}
             );
     });
     describe('search()', () => {
